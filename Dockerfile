@@ -5,7 +5,7 @@ RUN apt-get update && apt-get upgrade -y && \
   apt-utils apt-transport-https
   
 RUN apt-get install -y \
-  wget curl libcurl4-gnutls-dev \
+  curl libcurl4-gnutls-dev \
   libxml2-dev zlib1g-dev \
   libfreetype6 libfreetype6-dev \
   libjpeg-dev libpng-dev libjpeg-progs \
