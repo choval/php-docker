@@ -10,10 +10,7 @@ RUN apt-get install -y \
   libfreetype6 libfreetype6-dev \
   libjpeg-dev libpng-dev libjpeg-progs \
   libzip-dev gnupg xfonts-base xfonts-75dpi \
-  && docker-php-ext-configure gd \
-  --with-freetype-dir=/usr/include/freetype2 \
-  --with-png-dir=/usr/include \
-  --with-jpeg-dir=/usr/include \
-  && docker-php-ext-install sockets pcntl zip \
-  pdo_mysql gd gettext intl soap mbstring pcntl
+  libonig-dev
+RUN docker-php-ext-install sockets pcntl zip \
+  pdo_mysql gd gettext intl soap
 
